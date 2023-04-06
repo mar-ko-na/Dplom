@@ -8,12 +8,12 @@ import androidx.recyclerview.widget.ListAdapter
 import com.example.diplom.R
 import com.example.diplom.databinding.ItemShopDisabledBinding
 import com.example.diplom.databinding.ItemShopEnabledBinding
-import com.example.diplom.domain.ShopItem
+import com.example.diplom.domain.TaskItem
 
-class ShopListAdapter : ListAdapter<ShopItem, ShopItemViewHolder>(ShopItemDiffCallback()) {
+class ShopListAdapter : ListAdapter<TaskItem, ShopItemViewHolder>(ShopItemDiffCallback()) {
 
-    var onShopItemLongClickListener: ((ShopItem) -> Unit)? = null
-    var onShopItemClickListener: ((ShopItem) -> Unit)? = null
+    var onShopItemLongClickListener: ((TaskItem) -> Unit)? = null
+    var onShopItemClickListener: ((TaskItem) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShopItemViewHolder {
         val layout = when (viewType) {

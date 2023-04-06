@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 
 class GetShopListUseCase(private val shopListRepository: ShopListRepository) {
 
-    fun getShopList(): LiveData<List<ShopItem>> {
+    fun getShopList(): LiveData<List<TaskItem>> {
         return shopListRepository.getShopList()
     }
 }

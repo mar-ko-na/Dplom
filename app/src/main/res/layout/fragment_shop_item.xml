@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/name_hint"
                 android:inputType="textCapWords"
-                android:text="@{viewModel.shopItem.name}"
+                android:text="@{viewModel.taskItem.name}"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/count_hint"
                 android:inputType="number"
-                android:text="@{String.valueOf(viewModel.shopItem.count)}"
+                android:text="@{String.valueOf(viewModel.taskItem.count)}"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 

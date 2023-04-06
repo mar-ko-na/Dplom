@@ -1,6 +1,6 @@
 package com.example.diplom.domain
 
-data class ShopItem(
+data class TaskItem(
     val name: String,
     val count: Int,
     val enabled: Boolean,

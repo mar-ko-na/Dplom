@@ -6,7 +6,7 @@ import com.example.diplom.data.ShopListRepositoryImpl
 import com.example.diplom.domain.DeleteShopItemUseCase
 import com.example.diplom.domain.EditShopItemUseCase
 import com.example.diplom.domain.GetShopListUseCase
-import com.example.diplom.domain.ShopItem
+import com.example.diplom.domain.TaskItem
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -18,12 +18,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     val shopList = getShopListUseCase.getShopList()
 
-    fun deleteShopItem(shopItem: ShopItem) {
-        deleteShopItemUseCase.deleteShopItem(shopItem)
+    fun deleteShopItem(taskItem: TaskItem) {
+        deleteShopItemUseCase.deleteShopItem(taskItem)
     }
 
-    fun changeEnableState(shopItem: ShopItem) {
-        val newItem = shopItem.copy(enabled = !shopItem.enabled)
+    fun changeEnableState(taskItem: TaskItem) {
+        val newItem = taskItem.copy(enabled = !taskItem.enabled)
         editShopItemUseCase.editShopItem(newItem)
     }
 }

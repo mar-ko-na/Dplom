@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.diplom.databinding.FragmentShopItemBinding
-import com.example.diplom.domain.ShopItem
+import com.example.diplom.domain.TaskItem
 
 class ShopItemFragment : Fragment() {
 
@@ -22,7 +22,7 @@ class ShopItemFragment : Fragment() {
         get() = _binding ?: throw RuntimeException("FragmentShopItemBinding == null")
 
     private var screenMode: String = MODE_UNKNOWN
-    private var shopItemId: Int = ShopItem.UNDEFINED_ID
+    private var taskItemId: Int = TaskItem.UNDEFINED_ID
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -96,7 +96,7 @@ class ShopItemFragment : Fragment() {
     }
 
     private fun launchEditMode() {
-        viewModel.getShopItem(shopItemId)
+        viewModel.getShopItem(taskItemId)
         binding.saveButton.setOnClickListener {
             viewModel.editShopItem(
                 binding.etName.text?.toString(),
@@ -128,7 +128,7 @@ class ShopItemFragment : Fragment() {
             if (!args.containsKey(SHOP_ITEM_ID)) {
                 throw RuntimeException("Param shop item id is absent")
             }
-            shopItemId = args.getInt(SHOP_ITEM_ID, ShopItem.UNDEFINED_ID)
+            taskItemId = args.getInt(SHOP_ITEM_ID, TaskItem.UNDEFINED_ID)
         }
     }
 

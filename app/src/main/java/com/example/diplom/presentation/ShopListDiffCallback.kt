@@ -1,11 +1,11 @@
 package com.example.diplom.presentation
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.diplom.domain.ShopItem
+import com.example.diplom.domain.TaskItem
 
 class ShopListDiffCallback(
-    private val oldList: List<ShopItem>,
-    private val newList: List<ShopItem>,
+    private val oldList: List<TaskItem>,
+    private val newList: List<TaskItem>,
 ): DiffUtil.Callback() {
 
     override fun getOldListSize(): Int {
